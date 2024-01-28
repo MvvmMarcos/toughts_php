@@ -1,0 +1,791 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    width: 100%;
+    border-bottom: 2px solid chocolate;
+    position: relative;
+}
+img{
+    background-size: cover;
+    box-sizing: border-box;
+}
+/* body {
+    height: 100%;
+    width: 100vw;
+} */
+
+.container {
+    margin: 0 10%;
+}
+
+.msg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.msg-container p {
+    font-size: 20px;
+}
+
+.success {
+    border: 2px solid green;
+    padding: 10px 20px;
+    color: green;
+    border-radius: 40px;
+}
+
+.danger {
+    border: 2px solid #f00;
+    padding: 10px 20px;
+    color: #f00;
+    border-radius: 40px;
+}
+
+.logo {
+    width: 120px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 12px;
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 22px;
+    color: chocolate;
+    text-decoration: none;
+    position: relative;
+}
+
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    background: chocolate;
+    height: 3px;
+    bottom: -5px;
+    left: 25%;
+    transform: translateY(-25%);
+    transition: width 0.2s;
+}
+
+nav ul li a:hover::after {
+    width: 75%;
+}
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+}
+
+/*BANNER*/
+#banner {
+    width: 60%;
+    height:70vh;
+    background: url(../../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    
+}
+
+#banner .title-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    color: transparent;
+    background: linear-gradient(chocolate, chocolate);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -1000px 0;
+    animation: backColor 5s linear infinite alternate;
+}
+
+@keyframes backColor {
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/*END BANNER*/
+/*TOUGHTS*/
+#toughts {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.toughts-container {
+    margin: 0 10%;
+}
+
+.toughts-container h1 {
+    font-size: 30px;
+    color: chocolate;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+.toughts-container h1 span{
+    color: blue;
+    text-transform: uppercase;
+}
+.toughts-container a {
+    font-size: 22px;
+    color: chocolate;
+    text-decoration: none;
+    background: #fff;
+    padding: 8px;
+    border: 1px solid chocolate;
+    border-radius: 40px;
+}
+.empty-box{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+.empty-box p{
+    font-size: 28px;
+    color: chocolate;
+    display: flex;
+    flex-direction: column;
+}
+.empty-box p span{
+    text-align: center;
+    font-size: 40px;
+}
+
+.toughts-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toughts-search input {
+    padding: 10px 20px;
+    border: 1px solid chocolate;
+    border-radius: 40px;
+    width: 500px;
+    font-size: 20px;
+    color: chocolate;
+    outline: none;
+    margin: 15px 0;
+}
+
+::placeholder {
+    color: chocolate;
+}
+
+.toughts-search button {
+    position: absolute;
+    padding: 10px 20px;
+    border: 1px solid chocolate;
+    border-radius: 40px;
+    background: #fff;
+    font-size: 20px;
+    color: chocolate;
+    right: 0;
+    top: 15px;
+    cursor: pointer;
+}
+
+.toughts-search button:hover {
+    transform: scale(1.1);
+}
+
+.order-container {
+    display: flex;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.order-container span {
+    color: chocolate;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.order-container button {
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid chocolate;
+    cursor: pointer;
+}
+
+.order-container button i {
+    font-size: 22px;
+    color: chocolate;
+}
+
+.order-container button:hover {
+    transform: scale(1.1);
+}
+
+.order-container a {
+    font-size: 22px;
+    color: chocolate;
+    text-decoration: none;
+    background: #fff;
+    padding: 8px;
+    border: 1px solid chocolate;
+    border-radius: 40px;
+}
+
+.order-container a:hover {
+    transform: scale(1.1);
+}
+
+.toughts-box-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.toughts-box-container figure {
+    margin: 15px 0;
+    border-bottom: 1px solid chocolate;
+}
+
+.toughts-box-container blockquote {
+    font-size: 22px;
+    color: chocolate;
+}
+
+.toughts-box-container figcaption {
+    margin: 8px 0;
+    color: blue;
+}
+
+.toughts-box-container figcaption span {
+    color: chocolate;
+}
+ul.paginacao{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 30px 0;
+}
+ul.paginacao li a{
+    margin: 0 15px;
+    font-size: 22px;
+    color: chocolate;
+    text-decoration: none;
+}
+ul.paginacao a.selected{
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid chocolate;
+    color: blue;
+    font-size: 22px;
+}
+.paginacao a:hover{
+    transform: scale(1.2);
+}
+/*END TOUGHTS*/
+/*CREATE*/
+#register,
+#login {
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#register h1,
+#login h1 {
+    font-size: 30px;
+    color: chocolate;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+/*ENDCREATE*/
+/* FORM */
+#register form,
+#login form {
+    width: 600px;
+    margin: 0 10%;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.form-control label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: chocolate;
+}
+
+.form-control input {
+    padding: 10px 20px;
+    border: 1px solid chocolate;
+    outline: none;
+    border-radius: 40px;
+    font-size: 18px;
+    color: chocolate;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 18px;
+    color: chocolate;
+    display: none;
+}
+
+.btn-form {
+    border: 1px solid chocolate;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 18px;
+    color: chocolate;
+    font-weight: bold;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.btn-form:hover {
+    transform: scale(1.1);
+}
+
+.info {
+    font-size: 18px;
+    color: chocolate;
+    margin: 10px 0;
+}
+
+.info a {
+    text-decoration: none;
+    color: chocolate;
+}
+
+.info a:hover {
+    color: red;
+}
+
+/* FORM */
+/* DASHBOARD */
+#dashboard {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard-container {
+    margin: 0 10%;
+}
+
+.dashboard-container h1 {
+    padding: 80px 0 60px;
+    text-align: center;
+    color: chocolate;
+    font-size: 30px;
+}
+.dashboard-container h1 span{
+    color: blue;
+}
+table {
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+    /* padding-bottom: 50px; */
+}
+
+table tr th {
+    color: chocolate;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid chocolate;
+    padding-bottom: 10px;
+}
+
+table tr td {
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+    color: coral;
+    font-size: 18px;
+    text-align: center;
+    transition: background 0.5s;
+}
+
+table tr:hover td {
+    background: #282525;
+}
+
+table td.actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+table td.actions a,
+table td.actions button {
+    border: none;
+    background: transparent;
+    color: chocolate;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+table td.actions a i.fa-pen-to-square:hover {
+    color: blue;
+    transform: scale(1.2);
+}
+
+table td.actions button.fa-circle-xmark:hover {
+    color: #f00;
+    transform: scale(1.2);
+}
+/*END DASHBOARD */
+/*CREATETOUGHT*/
+#createTought{
+    width: 100%;
+    min-height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    display: flex;
+    justify-content: center;
+}
+.create-container h1{
+    font-size: 30px;
+    color: chocolate;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+.create-container form{
+    width: 800px;
+}
+/*ENDCREATETOUGHT*/
+/*EDIT*/
+#editTought{
+    width: 100%;
+    min-height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    display: flex;
+    justify-content: center;
+}
+.edit-container h1{
+    font-size: 30px;
+    color: chocolate;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+.edit-container h1 span{
+    color: blue;
+    margin-left: 10px;
+}
+.edit-container form{
+    width: 800px;
+}
+/*ENDEDIT*/
+/*Footer*/
+footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    border-top: 2px solid chocolate;
+}
+
+footer .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 10%;
+}
+
+.col {
+    flex-basis: 50%;
+    flex-direction: column;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: chocolate;
+    font-size: 22px;
+    margin: 20px 0;
+    width: 100%;
+    display: inline-block;
+}
+
+.social-media i {
+    font-size: 20px;
+    color: chocolate;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.col i:hover {
+    transform: scale(1.2);
+}
+
+.send-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+}
+
+.send-box input {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    outline: 0;
+    border: 0;
+
+    font-size: 22px;
+    color: chocolate;
+
+    border-radius: 40px;
+}
+
+.send-box input::placeholder {
+    color: chocolate;
+}
+
+.send-box button {
+    position: absolute;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    font-size: 22px;
+    border-radius: 40px;
+    border: 1px solid chocolate;
+    color: chocolate;
+    right: 45px;
+    cursor: pointer;
+}
+
+.send-box button:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    text-align: center;
+    font-size: 16px;
+    color: chocolate;
+    padding-bottom: 20px;
+}
+footer p b{
+    color: blue;
+}
+footer span i {
+    font-size: 20px;
+    color: red;
+    margin: 0 10px;
+}
+
+/*END Footer*/
+@media screen and (max-width:900px) {
+    .logo {
+        width: 100px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    #banner .title-banner {
+        font-size: 100px;
+    }
+
+    .toughts-container h1 {
+        font-size: 22px;
+    }
+
+    .toughts-search input {
+        width: 430px;
+    }
+
+    .toughts-search input,
+    .toughts-search button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .order-container span {
+        font-size: 18px;
+    }
+
+    .order-container button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .order-container button i {
+        font-size: 18px;
+    }
+
+    .order-container a {
+        font-size: 18px;
+    }
+
+    #register form,
+    #login form {
+        width: 500px;
+        margin: 0 10%;
+    }
+
+    .form-control {
+        margin: 10px 10%;
+    }
+
+    .form-control label {
+        font-size: 16px;
+    }
+
+    .form-control input {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    #message {
+        font-size: 16px;
+    }
+
+    .btn-form {
+        padding: 8px 16px;
+        font-size: 16px;
+        margin: 10px 10%;
+    }
+
+    .info {
+        font-size: 16px;
+        margin: 10px 10%;
+    }
+    /* DASHBOARD */
+    #dashboard{
+        width: 100%;
+    }
+    .dashboard-container h1 {
+        font-size: 25px;
+    }
+    table tr th {
+        font-size: 16px;
+    }
+    table tr td {
+        padding: 8px 0;
+        font-size: 16px;
+    }
+
+    table td.actions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    table td.actions button,
+    table td.actions a{
+        font-size: 16px;
+        padding: 8px 0;
+    }
+    /*END DASHBOARD */
+    /*CREATETOUGHT*/
+    #editTought{
+        min-height: 50vh;
+    }
+    .edit-container h1{
+        font-size: 28px;
+    }
+    .edit-container form{
+        width: 600px;
+    }
+    /*END CREATETOUGHT*/
+    /*EDIT*/
+#createTought{
+    min-height: 50vh;
+}
+.create-container h1{
+    font-size: 28px;
+}
+.create-container form{
+    width: 600px;
+}
+/*ENDEDIT*/
+    footer p {
+        font-size: 14px;
+        padding-bottom: 18px;
+    }
+
+    footer span i {
+        font-size: 18px;
+    }
+    footer .row {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .social-media a {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .social-media i {
+        font-size: 16px;
+    }
+
+    .send-box {
+        margin: 10px auto;
+    }
+
+    .send-box input {
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+
+    .send-box input::placeholder {
+        color: chocolate;
+    }
+
+    .send-box button {
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+
+}

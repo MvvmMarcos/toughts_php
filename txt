@@ -1,0 +1,13 @@
+<div class="paginacao">
+    <a href="<?= $URL ?>toughts.php?page=1"">Primeria</a>
+    <?php if ($page > 1) : ?>
+    <a href=" <?= $URL ?>toughts.php?page=<?= $page - 1 ?>"><?= $page - 1 ?></a>
+        <?php endif; ?>
+
+        <p class="selected"><?php echo $page ?></p>
+
+        <?php if ($page < $totalPage) : ?>
+            <a href="<?= $URL ?>toughts.php?page=<?= $page + 1 ?>"><?= $page + 1 ?></a>
+        <?php endif; ?>
+        <a href="<?= $URL ?>toughts.php?page=<?= $totalPage ?>">Última</a>
+</div>
